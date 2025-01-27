@@ -118,12 +118,12 @@ def update_sensor_data():
                       feature_names=["Voltage", "Current", "Irradiance", "Temperature", "Power"], show=False)
     plt.savefig(temp_file.name)
     plt.close()
-
-    return f"Voltage: {voltage}V
+    
+return f"""Voltage: {voltage}V
 Current: {current}A
 Irradiance: {irradiance}W/m²
 Temperature: {temperature}°C
-Power: {power}W",         fault_status, temp_file.name
+Power: {power}W""", fault_status, temp_file.name
 
 
 # Streamlit app UI
