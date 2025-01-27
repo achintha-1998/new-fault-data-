@@ -1,4 +1,3 @@
-
 import streamlit as st
 import random
 import numpy as np
@@ -118,8 +117,10 @@ def update_sensor_data():
                       feature_names=["Voltage", "Current", "Irradiance", "Temperature", "Power"], show=False)
     plt.savefig(temp_file.name)
     plt.close()
+
+    # Now return the sensor data, fault status, and the path to the SHAP plot
     
-return f"""Voltage: {voltage}V
+    return f"""Voltage: {voltage}V
 Current: {current}A
 Irradiance: {irradiance}W/m²
 Temperature: {temperature}°C
